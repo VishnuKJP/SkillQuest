@@ -1,0 +1,87 @@
+
+<!--Header Navigation bar and Side bar imported from HeadComponent-->
+	<head-comp></head-comp>
+
+<!-- HTML base code for Assessment Component-->
+
+<div class="fade_white">
+	<div class="skill_cards">
+		<div class="container" *ngIf="modulesRetrived" >
+			<div class="module_head">
+				<h1>Search for Skill Tests</h1>
+			</div>
+			
+			<div  *ngFor="let module of modulesList" class="content" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start left"  >
+				<div fxLayout="column" fxLayoutAlign="start left"  fxFlex = "100%"  >
+					<div fxFlex>
+						<mat-card class="module_card_modifed"> 
+							<div fxLayout.sm="column" fxLayout.xs="column"  fx.Layout="row" fxLayoutAlign="start left" fxLayoutGap="1%">
+								<div fxFlex="80">
+									<mat-card-title class="mat_card_title">{{module.name}}</mat-card-title>
+									<mat-card-content>
+										<div fxLayout="row" >
+											<div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="start left" fxLayoutGap="3%" fxFlex="33.33">
+												<span class="light_text">Participants:</span>
+												<span class="line_advisor dark_text">{{module.participats}}</span>
+											</div>
+											<div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="start left" fxLayoutGap="3%" fxFlex="33.33">
+												<span  class="light_text">SuccessRate:</span>
+												<span class="line_advisor dark_text" >{{module.successrate}}</span>
+											</div>
+											<div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="start left" fxLayoutGap="3%" fxFlex="33.33">
+												<span class="light_text">MaxScore:</span>
+												<span class="line_advisor dark_text">{{module.maxscore}}</span>
+											</div>
+										</div>
+									</mat-card-content>
+								</div>
+								<div fxFlex="20" fxLayoutAlign="end center" fxLayout="row"  fxLayoutGap="25%">
+									<div fxFlex fxLayoutAlign="start center">
+									<a href="https://www.dvoid.in" class="leaderboard-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Leaderboards">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+										<g fill="none" fill-rule="evenodd">
+										<rect width="32" height="32"></rect>
+										<path fill="#7A7F8A" fill-rule="nonzero" d="M9.2735426,14.0549199 L10.6636771,14.0549199 L10.7533632,15.3363844 C10.9327354,17.8077803 12.7713004,19.7757437 15.103139,20.187643 L15.103139,24.1693364 L12.8609865,24.1693364 C12.367713,24.1693364 11.9641256,24.5812357 11.9641256,25.0846682 C11.9641256,25.5881007 12.367713,26 12.8609865,26 L19.1390135,26 C19.632287,26 20.0358744,25.5881007 20.0358744,25.0846682 C20.0358744,24.5812357 19.632287,24.1693364 19.1390135,24.1693364 L16.896861,24.1693364 L16.896861,20.187643 C19.2286996,19.7757437 21.0672646,17.7620137 21.2466368,15.3363844 L21.3363229,14.0549199 L22.7264574,14.0549199 C24.5201794,14.0549199 26,12.5446224 26,10.7139588 C26,8.88329519 24.5201794,7.37299771 22.7264574,7.37299771 L21.8295964,7.37299771 L21.8744395,6.9610984 C21.8744395,6.68649886 21.7847534,6.4576659 21.6502242,6.27459954 C21.470852,6.09153318 21.2466368,6 20.9775785,6 L11.0224215,6 C10.7533632,6 10.529148,6.09153318 10.3497758,6.27459954 C10.1704036,6.4576659 10.0807175,6.73226545 10.1255605,6.9610984 L10.1704036,7.37299771 L9.2735426,7.37299771 C7.47982063,7.37299771 6,8.88329519 6,10.7139588 C6,12.5446224 7.43497758,14.0549199 9.2735426,14.0549199 Z M22.6367713,9.20366133 C23.4439462,9.20366133 24.1165919,9.89016018 24.1165919,10.7139588 C24.1165919,11.5377574 23.4439462,12.2242563 22.6367713,12.2242563 L21.3811659,12.2242563 L21.6053812,9.20366133 L22.6367713,9.20366133 L22.6367713,9.20366133 Z M9.2735426,9.20366133 L10.3049327,9.20366133 L10.529148,12.2242563 L9.2735426,12.2242563 C8.46636771,12.2242563 7.79372197,11.5377574 7.79372197,10.7139588 C7.79372197,9.89016018 8.42152466,9.20366133 9.2735426,9.20366133 Z"></path>
+										<path  fill="FFF" class="leaderboard-fill" d="M19.9013453,7.83066362 L19.3632287,15.1990847 C19.2735426,17.0297483 17.7488789,18.4485126 15.955157,18.4485126 C14.161435,18.4485126 12.6367713,17.0297483 12.5022422,15.1990847 L11.9641256,7.83066362 L19.9013453,7.83066362 L19.9013453,7.83066362 Z"></path>
+										</g>
+										</svg>
+									</a>
+									</div>
+									<div fxFlex fxLayoutAlign="end center">
+									
+									<button (click)="onClick(module)" [routerLink]="['environment']" mat-raised-button color="primary">Start Test</button>
+									</div>
+								</div>
+							</div>
+						</mat-card>
+					</div>
+				</div>
+				<!--<div fxLayout="column" fxLayoutAlign="start left"  fxFlex = "30%" fxLayoutGap="10px" >
+					<div fxFlex>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+							
+						</mat-card>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+						</mat-card>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+						</mat-card>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+						</mat-card>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+						</mat-card>
+						<mat-card class="side_card_modifed"> 
+							<mat-card-title class="mat_card_title">SCJP Test</mat-card-title>
+						</mat-card>
+					</div>
+					
+				</!--div>-->
+			</div>
+			</div>
+		
+	<div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container" flex>
+	<div class="question_block">
+		<div class="question">
+			<p>{{question.question}}</p>
+		</div>
+		<div class="options" *ngFor="let option of question.options"  [@heroState]=option.state (click)="toggleState(question,option)">
+			<div class="option">{{option.value}}</div>
+		</div>
+		<div style="margin-top:5%">
+		</div>
+		<div fxLayout.sm="column" fxLayout.xs="column" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around begin" flex>
+			<div class="datas" (click)="goFirst()">
+				<div class="data" fxLayoutAlign="center">First</div>
+			</div>
+			<div class="datas" (click)="goPrevious()">
+				<div class="data" fxLayoutAlign="center">Previous</div>
+			</div>
+			<timer></timer>
+			<div class="datas" (click)="goNext()">
+				<div class="data" fxLayoutAlign="center">Next</div>
+			</div>
+			<div class="datas" (click)="goLast()">
+				<div class="data" fxLayoutAlign="center">Last</div>
+			</div>
+		</div>
+		<div style="margin-top:6%">
+		</div>
+	</div>
+<div>

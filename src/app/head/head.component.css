@@ -1,0 +1,86 @@
+md-sidenav-container {
+  margin: 0;
+  width: 100%;
+  height: 0%;
+}
+
+.mat-sidenav.mat-sidenav-side {
+    z-index: 1;
+	min-width: 30vw;
+}
+
+.mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item {
+    color: #1e2122;
+	font-size:16px;
+	padding-top: 0px;
+}
+.mat-list, .mat-nav-list, .mat-selection-list {
+    padding-top: 0px;
+    display: block;
+}
+.mat-toolbar.mat-primary {
+    background: #ff503a;
+    color: rgba(255,255,255,.87);
+}
+
+.mat-sidenav {
+    background-color: #1e2122;
+    color: rgba(247, 245, 245, 0.87);
+}
+
+a.mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item {
+    color: #f6f7f7;
+	font-size: 18px;
+    padding-top: 0px;
+	padding-left:0px;
+	font-family: 'Kreon', serif;
+	font-style: bold;
+	 height: 60px;
+}
+.mat-list{
+	
+    padding-left: 20%;
+}
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 20% !important;
+    width: 35vw !important;
+    max-width: 200px !important;
+	
+} 
+.material-icons.md-48 { font-size: 36px; }
+.mat-list-item-content:hover { 
+    color: #ff503a;
+	font-size:20px;
+	font-weight:bolder;
+}
+
+
+.moving-left
+{
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+
+}
+.moving-left:hover
+{
+ transform: translateX(-10px);
+}
+
+.moving-right
+{
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+  margin-top:10px;
+
+}
+.moving-right:hover
+{
+ transform: translateX(10px);
+}
+
+._head{
+	font-family: 'Kaushan Script', cursive;
+}
+

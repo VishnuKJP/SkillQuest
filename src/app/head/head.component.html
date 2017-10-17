@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+		<button   mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon class="mat-24">menu</mat-icon>
+		</button>
+		<span class="_head">SkillQuest</span>
+		<span class="example-spacer"></span>
+</mat-toolbar>
+<mat-sidenav-container>
+	
+</mat-sidenav-container>
+<mat-sidenav #sidenav mode="side" class="app-inner" >
+		<mat-nav-list layout-align="center" style="padding-top:0px;">
+			<mat-list class="moving-left" >
+				<mat-list-item>
+					<p mat-line></p>
+					<i  (click)="sidenav.toggle()" class="mat-list-icon material-icons mat-48">keyboard_arrow_left</i>
+				</mat-list-item>
+				
+			</mat-list>
+			<mat-list >
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >home</mat-icon>
+						<p mat-line>Home</p>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >account_circle</mat-icon>
+						<a href="account" mat-line>Profile</a>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >assessment</mat-icon>
+						<a routerLink="/assessment" routerLinkActive="active"  mat-line>Test</a>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >mode_edit</mat-icon>
+						<p mat-line>Blog</p>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >filter_drama</mat-icon>
+						<p mat-line>Services</p>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >graphic_eq</mat-icon>
+						<p mat-line>Careers</p>
+				</mat-list-item>
+				<mat-list-item class="moving-right">
+						<mat-icon mat-list-icon >grain</mat-icon>
+						<p mat-line>About</p>
+				</mat-list-item>
+			</mat-list>
+		</mat-nav-list>
+</mat-sidenav>

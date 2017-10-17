@@ -1,0 +1,141 @@
+/* 	BACKGROUND FOR FULL PAGE GROW AS THE CONTENT INSIDE IT GROWS */
+.fade_white{
+	background-color:#f2f2f2;
+	height:89%;
+	overflow:auto;
+}
+
+/* 	PADDING FOR FULL PAGE FOR CLEAN UI */
+.content{
+	padding-top		:1%;
+	padding-left	:3%;
+	padding-right	:3%;
+	padding-bottom	:0.2%;
+  max-width:70%;
+}
+.module_head{
+	color:#2d1846;
+	padding-top		:1%;
+	padding-left	:4%;
+	padding-right	:1%;
+	padding-bottom	:1%;
+}
+.module_head h1{
+	font-family: 'Lato', sans-serif;
+	font-size:24px;
+	padding-bottom:2%;
+}
+
+/* INPUT BOX FOR WIDHT AND WHITE BACKGROUND , RADIUS , SHADOW , HEIGHT*/
+.full_width{
+	background:#ffffff;
+	padding-top:10px;
+	border-radius: 4px;
+	height:50px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
+}
+
+input.full_width{
+	width:94.5%;
+}
+
+
+/* 	CSSS FOR INPUT TAG WITH BACKGROUND IMAGE */
+.input_over{
+	border: none;
+	border-color: transparent;
+	width:100%;
+	text-align:center-left;
+	font-family: 'Lato', sans-serif;
+	font-size:18px;
+	padding-bottom:10px;
+	background-image:url('http://i47.tinypic.com/r02vbq.png');
+	background-repeat:no-repeat;
+	background-position:left center;
+	outline:0;	
+	padding-left:55px;	
+	background:#ffffff;
+	padding-top:10px;
+	border-radius: 4px;
+	height:40px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* DISABLE TEXT BORDER ON FOCUS AND TYPING */
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* PLACEHOLDER TEXT COLOR */
+::-webkit-input-placeholder { 
+    color:    #dadada;
+}
+
+.md_card_title{
+	font-family: 'Lato', sans-serif;
+	font-size:18px;
+	font-weight: bold;
+}
+
+/*ORIGINAL CARD CSS*/
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding-top:14px;
+	padding-bottom:6px;
+	padding-left:14px;
+	padding-right:14px;
+    border-radius: 2px;
+}
+
+/*MODIFIED CSS FOR MATERIAL CARD*/
+.module_card_modifed{
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding-top:14px;
+	padding-bottom:6px;
+	padding-left:14px;
+	padding-right:14px;
+    border-radius: 2px;
+}
+
+.side_card_modifed{
+	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+	margin-bottom:8px;
+    border-radius: 2px;
+	height:246px;
+}
+
+/*SPACING FOR 3 DIV WITH SPACING*/
+.line_advisor{
+	padding-right:13%;
+}
+
+.light_text{
+	color:#7a7f8a;
+}
+
+.dark_text{
+	font-family: 'Lato', sans-serif;	
+	font-weight:700;
+}
+
+/*TOP RANKING LIST ICON WITH LINK*/
+.skilltest-box1 .leaderboard-icon:hover .leaderboard-fill {
+    fill: #7a7f8a;
+}
+
+/*MATERIAL BUTTON FOR START TEST */
+.mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: #d7263d;
+	font-family: 'Lato', sans-serif;	
+}
+
+/*MATERIAL BUTTON FOR START TEST :HOVER  */
+ .mat-fab.mat-primary:hover, .mat-mini-fab.mat-primary:hover, .mat-raised-button.mat-primary:hover {
+    background-color: #ae2d43;
+}

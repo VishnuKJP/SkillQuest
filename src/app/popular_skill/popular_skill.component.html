@@ -1,0 +1,16 @@
+<div class="skill_cards">
+	<div *ngIf="isDataAvailable" class="container" fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutAlign="start" fxLayoutGap="10px"  >
+		<div class="card" *ngFor="let data of domainModel" fxFlex="32">
+			<mat-card>
+				<mat-card-header>
+				   <img mat-card-avatar src="https://www.techgig.com/files/skilllogo/Skill-Logo-Java.svg" >
+				   <mat-card-title class="skill_header">{{data.name}}</mat-card-title>
+				   <mat-card-subtitle>Total Participants:0</mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-content>
+				    <h1 class="skill_content"><a routerLink="{{data.name}}">See {{data.module}} Test</a></h1>
+				</mat-card-content>
+			 </mat-card>
+		</div>
+	</div>
+</div>
