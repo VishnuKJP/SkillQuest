@@ -1,11 +1,10 @@
-
-import {Option} from '../model/Option';
+import { Option } from '../model/Option';
 export class Question {
 	
-	public questionNo:string;
+	public _id:string;
 	public question:string;
-	public answer:string;		
-	public options:Array<Option>;
+    public answer: string;
+    public options: Array<string>;
 	public chosen:string;
 	
 	constructor(){

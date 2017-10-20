@@ -5,13 +5,13 @@ import {Domain} from '../model/Domain';
 @Injectable()
 export class AssesmentService {
 
-	    private host="https://skillquest.herokuapp.com/";	
+      private host ="http://localhost:3000/";	
       private path ="webapp/assessment"
       constructor(private http: Http) {
         console.log("Assessment Service Invoked");
       }
       getPopularSkill(): Observable<Domain[]> {
-        return this.http.get(this.host + this.path).map((res: Response) => {
+        return this.http.get("http://localhost:3000/webapp/assessment").map((res: Response) => {
           if (res.json().status == true)
             return res.json().domains;
           else

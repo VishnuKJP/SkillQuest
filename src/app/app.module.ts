@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { AccountComponent } from './account/account.component';
 import { EnvironmentComponent } from './environment/environment.component';
+import { BridgeComponent } from './bridge/bridge.component';
 import 'hammerjs';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ModuledataService } from './module_data/moduledata.service';
@@ -21,11 +22,13 @@ import { TimerComponent } from './timer/timer.component';
 import { AssesmentService } from './services/assesment.service';
 import { ModuleService } from './services/module.service'
 import { StorageService } from './services/storage.service'
+import { TestService } from './services/test.service'
 
 
 export const ROUTES: Routes = [
-	 {  path: '', redirectTo: '/home' ,pathMatch:'full' },
-	 { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'test/:id', component: BridgeComponent },
 	 { path: 'account', component: AccountComponent },
 	 { path: 'assessment', component: AssessmentComponent },
 	 { path: 'assessment/:module', component: ModuleComponent},
@@ -39,7 +42,8 @@ export const ROUTES: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-	AssessmentComponent,
+    AssessmentComponent,
+    BridgeComponent,
 	HeadComponent,
 	AccountComponent,
 	PopularskillComponent,
@@ -62,7 +66,7 @@ export const ROUTES: Routes = [
 	 RouterModule.forRoot(ROUTES,{ useHash: true })
 	
   ],
-	providers: [ModuleService,AssesmentService,ModuledataService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
+	providers: [TestService,ModuleService,AssesmentService,ModuledataService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   
   bootstrap: [AppComponent]
 })

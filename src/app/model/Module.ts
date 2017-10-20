@@ -1,5 +1,6 @@
 export class Module{
-	  public name:string;
+    public _id: string;
+    public name: string;
 	  public domain:string;
 	  public participats:string;
 	  public successrate:string;
@@ -9,5 +10,5 @@ export class Module{
 	  	console.log("Sub Object created");
 	  	this.maxscore="1";
 	  }
-	
+  
 }

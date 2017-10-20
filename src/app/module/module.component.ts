@@ -1,9 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import {HeadComponent} from '../head/head.component';
-import {ModuledataService} from '../module_data/moduledata.service';
-import {ModuleService} from '../services/module.service'
-import {Module} from '../model/Module';
+import { ModuledataService } from '../module_data/moduledata.service';
+import { ModuleService } from '../services/module.service';
+import { TestService } from '../services/test.service';
+import { Module } from '../model/Module';
+import { Test } from '../model/Test';
 @Component({
   selector: 'module',
   templateUrl: './module.component.html',
@@ -16,7 +18,7 @@ export class ModuleComponent implements OnInit , OnDestroy{
 	  public modulesRetrived:boolean=false;
     public module: string;
 
-    constructor(private route: ActivatedRoute, private moduleService: ModuleService) {
+    constructor(private router:Router,private route: ActivatedRoute, private moduleService: ModuleService, private testService: TestService) {
       console.log("Module Component , Constructor Method Executed");
     }
 	
@@ -33,10 +35,15 @@ export class ModuleComponent implements OnInit , OnDestroy{
     }
 
     ngOnDestroy() {
+
       console.log("Module Component , Destory Method Executed");
     }
 
     onClick(module: Module): void {
-      console.log(module.name);
+      this.testService.getTestID(module).subscribe((res) => {
+        console.log("Test ID Retrived");
+        console.log(res);
+        this.router.navigate(['./test/' + res]);
+      });
     }
 }

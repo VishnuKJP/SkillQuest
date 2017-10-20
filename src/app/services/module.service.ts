@@ -6,7 +6,7 @@ import {Module} from '../model/Module';
 @Injectable()
 export class ModuleService {
 
-	private host="https://skillquest.herokuapp.com/";
+	private host="http://localhost:3000/";
 	constructor(private http: Http){
 		console.log("Service Created");
 	}

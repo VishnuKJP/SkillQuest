@@ -30,7 +30,7 @@ export class TimerComponent implements OnInit {
 				if(toSeconds<0){
 					
 					console.log("Forcing the Suite to Close")
-					this.router.navigate(['./home']);
+					///this.router.navigate(['./home']);
 				}
 				var hours,minutes,sec;
 				var time=toSeconds;
